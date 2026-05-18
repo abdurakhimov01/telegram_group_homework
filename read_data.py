@@ -10,4 +10,7 @@ def read_data(file_path: str)->dict:
     
     """
     #open file
-    o=open
+    o=open("data/result.json")
+    f=o.read()
+    return f
+print(read_data('data/result.jsom'))
