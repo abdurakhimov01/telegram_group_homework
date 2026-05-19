@@ -1,4 +1,4 @@
-from read_data import read_data,json
+from read_data import read_datas,json
 
 def find_number_of_messages(data: dict)->int:
     """
@@ -10,10 +10,7 @@ def find_number_of_messages(data: dict)->int:
         int: Total number of messages.
     
     """
-    data=json.loads(data)
-    o=[]
-    for i in data["messages"]:
-        if "from" in i:
-            o.append(i["from_id"])
-    return o
-print(find_number_of_messages(read_data("data/result.json")))
+    k=json.loads(data)
+    f=k["messages"]
+    return len(f)
+print(find_number_of_messages(read_datas("data/result.json")))
